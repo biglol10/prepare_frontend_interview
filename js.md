@@ -116,7 +116,8 @@
 
 - [빌트인 객체 🔥](#빌트인-객체)
 
-  - 빌트인 객체가 뭔가요? 종류는 어떤게 있죠?
+  - 빌트인 객체가 뭔가요?
+  - 빌트인 객체의 종류는 어떤게 있죠?
   - 래퍼 객체에 대해서 알고 있나요?
 
 - [this 🔥](#this)
@@ -577,7 +578,17 @@ var observable$ = fromEvent(document, "click"); // RxJS 옵저버블
 | 원시 타입 |    undefined타입    |  var 키워드로 선언된 변수에 암묵적으로 할당되는 값  |
 | 원시 타입 |      null 타입      |  값이 없다는 것을 의도적으로 명시할 때 사용하는 값  |
 | 원시 타입 |  심벌(symbol) 타입  |              ES6에서 추가된 7번째 타입              |
+| 원시 타입 |     BigInt 타입     | 길이의 제약 없이 정수를 다룰 수 있게 해주는 숫자형  |
 | 객체 타입 |                     |                 객체, 함수, 배열 등                 |
+
+<details>
+<summary>BigInt 타입 레퍼런스</summary>
+
+- [MDN: 원시 값](https://developer.mozilla.org/ko/docs/Glossary/Primitive)
+- [MDN: BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- [javascript tutorial](https://www.javascripttutorial.net/javascript-data-types/)
+
+</details>
 
 <br/>
 
@@ -1415,9 +1426,22 @@ strict mode는 자바스크립트 언어의 문법을 좀 더 엄격히 적용�
 
 ## 빌트인 객체
 
-### 빌트인 객체가 뭔가요? 종류는 어떤게 있죠?
+### 빌트인 객체가 뭔가요? 
 
-개발자가 모든 기능을 구현하지 않고, 편하게 개발할 수 있도록 자바스크립트에서 기본적으로 제공하는 객체입니다.
+개발자가 모든 기능을 구현하지 않고, 편하게 개발할 수 있도록 자바스크립트에서 기본적으로 제공하는 객체이다.
+  
+Object, String, Number, Boolean, Symbol, Date, Math, RegExp, Array, Map/Set, WeakMap/WeakSet, Function, Promise, Reflect, Proxy, JSON, Error 등 40여개 표준 빌트인 객체가 있다.
+  
+### 빌트인 객체의 종류는 어떤게 있죠?
+
+빌트인 객체는 크게 **생성자 함수 객체**와 **그 외 객체**로 구분할 수 있다.
+
+- Math, Reflect, JSON을 제외한 표준 빌트인 객체는 모두 생성자 함수 객체이다.
+- 생성자 함수 객체는 **프로토타입 메서드**와 **정적 메서드**, 그 외 객체는 **정적 메서드**만 제공한다.
+
+<br/>
+
+**(\*) 자바스크립트 객체 분류**
 
 자바스크립트에서 객체는 크게 3개의 객체로 분류할 수 있다.
 
